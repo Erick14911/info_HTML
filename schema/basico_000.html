@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Basico 00</title>
+</head>
+<body background="img/luna.jpg" text="#ffffff" link="#eea0bb" vlink="#ffffff" alink="#ff0000"> <!--background=FOndo| text=color-->
+<!--Linea horizontal-->
+  <hr size="10" width="70%" align="center" noshade>
+  <hr size="10" width="70%" align="center" >
+  <h1><center>Mi primera pagina WEB</center></h1>
+  <p>Utilizacion de:</p>
+  <ul>
+    <li>fondo desde una imagen local</li>
+    <li>atributo aling="(center,right, left,top,bottom,middle)"</li>
+    <li>etiqueta "blockquote"</li>
+    <li>etiqueta "address"</li>
+    <li>enlace a mail, telefono, ancla, descarga(canvas)</li>
+  </ul>
+  <hr size="10" width="70%" align="center" noshade>
+  <p align="right">
+  Texto a la Derecha
+  <br> &nbsp;
+  <br>
+  Para ampliar el espacio entre lineas se une la cadena '&nbsp;'.
+  </p>
+  <br>
+  <br>
+  &nbsp;
+  <br>
+  <!--En este ejemplo podemos ver tres tipos de aling; top,middle,bottom-->
+  &nbsp;
+  <p aligm="left">
+   Texto a la Izquierda  </p>
+   <br>
+   <br>
+   &nbsp;
+   <br>
+   <!--En este ejemplo podemos ver tres tipos de aling; top,middle,bottom-->
+   <img src="img/perro.jpg" align="bottom" height="100">
+   <img src="img/perro.jpg" align="middle" width="100">
+   <img src="img/perro.jpg" align="top"    height="50"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    <!--Etiqueta de cita literaria-->
+   <blockquote>
+   La finalidad del arte es dar cuerpo a la esencia secreta de las cosas, <br>
+   no el copiar su apariencia.
+   </blockquote>
+
+     <p>Prueba de links :
+     <a href="basico_001.html#ancla0" title="desvia a la pagina de links">Primer link</a>
+     </p>
+     <p>
+     <a href=basico_001.html>
+     <img src="img/flecha_right.jpg" border="10"></a><br><br>
+     <a href="tel:+5537008159">+5537008159</a><br><br>
+     <a href="mailto:erickdlr1945@gmail.com">Enviar correo electronico</a>
+     <br> &nbsp;
+     <hr size="15" width="100%" align="center" noshade>
+    <!--Etiqueta de comentaríos-->
+     <address><center>
+     Autor: Erick De La Rosa<br>
+     Contacto: erickdlr14911@gmail.com
+     </center></address>
+     <!--Ancla--><a></a>
+     <canvas></canvas>
+<!--CODIGO CSS-->
+
+     <!--*{margin:0;padding:0;font-family:sans-serif;background: #c0ffee}
+canvas{background:#fff;}
+a {
+    background: #69c;
+    color: #fff;
+    padding: 5px 10px;
+}-->
+<!--*********************************************************************--!
+<!--CODIGO JAVASCRIPT-->
+   <!--var canvas = document.querySelector( 'canvas' ),
+    c = canvas.getContext( '2d' ),
+    mouseX = 0,
+    mouseY = 0,
+    width = 300,
+    height = 300,
+    colour = 'hotpink',
+    mousedown = false;
+
+// resize the canvas
+canvas.width = width;
+canvas.height = height;
+
+function draw() {
+  if (mousedown) {
+    // set the colour
+    c.fillStyle = colour;
+    // start a path and paint a circle of 20 pixels at the mouse position
+    c.beginPath();
+    c.arc( mouseX, mouseY, 10 , 0, Math.PI*2, true );
+    c.closePath();
+    c.fill();
+  }
+}
+
+// get the mouse position on the canvas (some browser trickery involved)
+canvas.addEventListener( 'mousemove', function( event ) {
+  if( event.offsetX ){
+    mouseX = event.offsetX;
+    mouseY = event.offsetY;
+  } else {
+    mouseX = event.pageX - event.target.offsetLeft;
+    mouseY = event.pageY - event.target.offsetTop;
+  }
+  // call the draw function
+  draw();
+}, false );
+
+canvas.addEventListener( 'mousedown', function( event ) {
+    mousedown = true;
+}, false );
+canvas.addEventListener( 'mouseup', function( event ) {
+    mousedown = false;
+}, false );
+
+var link = document.createElement('a');
+    link.innerHTML = 'download image';
+link.addEventListener('click', function(ev) {
+    link.href = canvas.toDataURL();
+    link.download = "mypainting.png";
+}, false);
+document.body.appendChild(link);-->
+</body>
+</html>

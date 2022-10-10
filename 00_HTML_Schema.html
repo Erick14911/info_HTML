@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_blank" href="_new" href="file:///C:/Users/MadGiraffe/Documents/Libreria/Libros/Programacion/HTML/"> <!--Base Ventana-->
+    <link rel="stylesheet" type="text/css" href="css/plantilla.css" title="azul">               <!--Etiqueta style.css-->
+    <link rel="stylesheet" type="text/css" href="azul1.css" title="azul">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="alternate stylesheet" type="text/css" href="rojo1.css" title="rojo"> <!--Alternate stylesheet-->
+    <link rel="alternate stylesheet" type="text/css" href="rojo2.css" title="rojo">
+    <meta http-equiv="default-style" content="nombre" />                          <!--Stylesheet por default-->
+    <meta http-equiv="content-style-type" content="text/css" />                   <!--Tipo de Stylesheet-->
+    <script src="codigo.js"></script>                                             <!--Script-->
+    <meta http-equiv="content-script-type" content="text/javascript" />           <!--Tipo de script-->                                           <!--Etiqueta script.js-->
+    <!--Disponibilidad de contenido, separados por ';' pueden ser los siguientes: attachment  o inline, filename, creation-date, size, modification-date, read-date-->
+    <meta name="content-disposition" content="attachment; filename=miArchivo.docx" /> 
+    <meta http-equiv="content-encoding" content="gzip" />                         <!--Encode-->
+    <meta http-equiv="content-language" content="es-AR, en" />                    <!--Especifica los idiomas-->
+    <meta charset="UTF-8">   
+    <meta http-equiv="window-target" content="_top" />                            <!--Mostrar en _self, _top, _parent, _blank-->
+    <meta http-equiv="content-type" content="text/html" charset="iso-8859-1"/>    <!--Tipo de contenido-->   
+    <meta http-equiv="date" content="Thursday, 4-Feb-16 00:15:00 GMT" />          <!--Fecha de publicacion-->  
+    <meta http-equiv="last-modified" content="Thursday, 4-Feb-16 00:15:00 GMT" /> <!--Fecha de modificacion-->                  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        <!--Responsive-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Refresh" content="5000" url=" ">                            <!--Recarga de pagina-->
+    <meta http-equiv="location" content="5000; segundaPagina.html" />             <!--Cambio de pagina-->
+    <meta http-equiv="allow" content="HEAD,GET,PUT,DELETE,OPTIONS" />             <!--Metodos HTTP soportados por el servidor-->
+    <meta http-equiv="cache-control" content="no-cache" />                        <!--"public","private","no-store"-->
+    <meta http-equiv="expires" content="Thursday, 4-Feb-16 00:15:00 GMT " />      <!--Expiración en cache-->
+    <meta http-equiv="set-cookie" content="SESION=23; path=/; expires=Thursday, 4-Feb-16 00:15:00 GMT" /> <!--Cookie-->
+    <meta name="author"      content="Mad_Giraffe"/>
+    <meta name="keywords"    content=""/>
+    <meta name="descripcion" content=""/>
+    <title>Laravel</title>
+    <!--@viewport{zoom: 1.0; width: device-width;} o {width: extend-to-zoom;}-->
+    <!--SCRIPT INCRUSTRADO-->
+    <script>
+      function iniciar(){
+        nombre1=document.getElementById("nombre");
+        nombre2=document.getElementById("apellido");
+        nombre1.addEventListener("input", validacion, false);
+        nombre2.addEventListener("input", validacion, false);
+        validacion();
+      edad=document.getElementById("miedad");
+      edad.addEventListener("change", cambiarrango, false);
+      document.informacion.addEventListener("invalid",validacion1, true);
+      document.getElementById("enviar").addEventListener("click",enviar, false);
+      document.informacion.addEventListener("input", controlar,false);
+      }
+    
+      function validacion(){
+    
+      if(nombre1.value=='' && nombre2.value==''){
+      nombre1.setCustomValidity('inserte al menos un nombre');
+      nombre1.style.background='#FFDDDD';
+      }else{
+      nombre1.setCustomValidity('');
+      nombre1.style.background='#AFEEEE';
+      }
+      }
+    
+      function cambiarrango(){
+      var salida=document.getElementById("rango");
+      var calc=edad.value-20;
+      if(calc<20){calc=0;
+      edad.value=20;
+      }
+      salida.innerHTML=calc+' a '+edad.value;
+      }
+      function validacion1(e){
+      var elemento=e.target;
+      elemento.style.background='#FFDDDD';
+      }
+      function enviar(){
+      var valido=document.informacion.checkValidity();
+      if(valido){
+      document.informacion.submit();
+      }
+      }
+      function controlar(e){
+      var elemento=e.target;
+      if(elemento.validity.valid){
+      elemento.style.background='#AFEEEE';
+      }else{
+      elemento.style.background='#FFDDDD';
+      }
+      }
+      window.addEventListener("load", iniciar, false);
+      </script>
+</head>
+<body> 
+    <h3>Instalar Laravel, Git, Composer (virtualbox,vagrant,homstead)</h3>
+    <p></p>
+  
+<div id="shell">
+    <!--Header-->
+    <header id="banner">
+    </header>
+    <!--Nav-->
+    <nav id="menu">
+      <ul>
+      </ul>
+    </nav>
+    <!--Section-->
+    <section id="section">
+    <!--Article-->
+    <article>
+    <header><cite</cite>
+    <time datetime="2011-10-12T12:10:45" pubdate></time></header>
+    <blockquote></blockquote>
+    <figure><img src="">
+    <figcaption>Descripcion de la imagen</figcaption>
+    </figure>
+    <footer>
+      <address></address>
+      <small></small>
+    </footer>
+    </article>
+    </section>
+    <!--Aside-->
+    <aside id="surf">
+  
+    </aside>
+    <!--Footer-->
+    <footer id="under">
+    <address></addess>
+    <small></small>
+    </footer>
+    <!--ELEMENTOS-->
+  <div id="Element" background="img/luna.jpg" text="#ffffff" link="#eea0bb" vlink="#ffffff" alink="#ff0000">
+  <hr size="10" width="70%" align="center" noshade>  &nbsp; <br>                    <!--Elementos basicos-->
+  <p><tt><i><b>Texto en negritas e inclinado</b></i></tt></p>
+  <small>Texto dentro de small</small>
+  <strike>Texto dentro de strike</strike>
+  <p><u><em>Subrrayado</em></u></p>
+  Caracteres especiales: &Aacute; &aacute; &#193; <br>
+  las vocales acentuadas &Aacute;,&aacute;,&Eacute;,&eacute;,&Iacute;,&iacute;,&Oacute;,&oacute;,&Uacute;,&uacute;,&uuml;.<br>
+  Signos &#161;, &#191;,&lt;. &gt;, &amp;, &quot;, &copy;, &reg;
+  <PRE>
+               ( @ @ )
+   ---------oOOo-(_)-oOOo---------
+  | Erick                         |
+  | E-mail: juan@juanito.ju       |
+  |                               |
+   ------Oooo.---------.oooO------
+        (   )          (   )
+         \  (          )  /
+          \_)          (_/
+  </PRE>
+  <h5 align="right">El Cairo, <sup>10 enero</sup><sub>2022</sub></h5>               <!--Edicion de texto sup y sub-->
+  <span style='font-family:"Bauhaus 93"'>Cambie el tipo de letra</span>             <!--Elementos con style-->
+  <div style="background-image:url(https://www.deviantart.com/1poz/art/Windy-drop-910589830)"></div>di>
+  <!--Imagenes son de 15 a 20kb-->
+  <img src="img/pinguino.jpg" align="left" vspace="5" hspace="30" width="66" height="81" alt="pinguino">
+  <img src="img/proposito.png" usemap="#mapa0" border="0" alt="Diagrama para encontrar tu proposito" align="left" vspace="10" hspace="40">
+  <!--ahora usamos la etiqueta map que puede encontrarse en alguna otra pagina cuidando que el atributo nombre sea el mismo de la llamada-->
+  <!--Dentro de la etiqueta maps usamos la etiqueta area para designar cada area de la imagen mapa siendo area una etiqueta simple-->
+  <map name="mapa0">
+  <area shape="circle" alt""
+  coords="263,291,12"
+  nohref>
+  <area shape="circle" alt=""
+  coords="260,150,50"
+  href="basico_000.html">
+  <area shape="circle" alt=""
+  coords="410,300,50"
+  href="basico_list.html">
+  <area shape="rect" alt=""
+  coords="85,230,150,360"
+  href="basico_002.html">
+  <area shape="poly" alt=""
+  coords="220,400,261,371,300,400,320,470,200,470"
+  href="basico_tab.html">
+  </map>
+  <br clear="all">
+  <hr size="20" width="80%" align="center" noshade>
+
+  <!--link-->
+  <a name="ultimo_p"></a>
+  <a href="#ultimo_p" rev="anterior" rel="siquiente">link_1 A este mismo documento</a>
+  <a href="img/espacio.png"><img src="img/nave_espacial.jpg" border="0" alt="Viaja al espacio" title="nave espacial" vspace="10" hspace="25" align="left"></a><br clear="left">
+  <a href="Curso-PHP.pdf" target="_blank">Documento pdf</a><br>                                <!--Mostrar en _self, _top, _parent, _blank-->
+  
+  <a href="tel:+5537008159">+5537008159</a><br>
+  <a href="mailto:erickdlr1945@gmail.com">Enviar correo electronico</a>
+  <!--Listas-->
+    <ul type="square"><em>                     <!--Podemos usar el atributo type en una lista no ordenada para dar valores square, disc, circle-->
+    <li type="disc">Aprender programaci&oacuten      <!--Tambien es un atributo que se puede usar en cada elemento de la lista-->
+    <li type="circle">Aprender electronica
+    <li>Leer literatura
+    </em></ul>
+    <!--Ordenada-->
+    <ol type="A" start="10"><em>                         <!--Podemos usar el atributo type en una lista ordenada para dar valores 1,a,A,i,I-->
+      <li>Aprender programaci&oacuten                            <!--El atributo start se utiliza para inicializar la lista desde un numero entero-->
+      <li  value="20">Aprender electronica                             <!--El atributo value se utiliza para darle un valor especial a cada miembro-->
+      <li>jugar canicas                                    <!--El atributo compact puede usarse en la lista para que use un minimo espacio-->
+      <li>Leer literatura
+      </em></ol>
+      <dl>
+        <dt>&nbsp;&nbsp;html
+        <dd>HiperText Markup Language, Lenguaje de marcas hipertexto.
+            Lenguaje para diseñar paginas WEB.
+        </dl>&nbsp; &nbsp;
+        <em><b>A continuación un ejemplo de listas tipo menu y directorio.</b></em>
+        <!--MENU-->
+        <menu>
+        <li>Semejante a
+        <li>la lista unorder
+        </menu>
+        <!--Directorio-->
+        <dir>
+        <li>se recomienda
+        <li>usar el unorder
+        </dir>
+        <!--Anidamiento-->
+        <em><b>Probando el anidamiento de listas</b></em>
+        <MENU>
+        <LI>Un nuevo Internet: IPv6
+        <LI>El WWW cobra vida: ha llegado el
+        HTML dinámico
+        <LI>Qué ordenador comprarse:
+        <OL>
+        <LI>CPU rápida. Con las siguientes
+        características:
+        <UL>
+        <LI>Procesador Pentium 166
+        <LI>CD-ROM 8x
+        <LI>Tarjeta de sonido 16 bits
+        <LI>Tarjeta de vídeo con 2 Mb
+        </UL>
+        <LI>Impresora a color de buena
+        definición.
+        <LI>Altavoces y cámara de vídeo.
+        <LI>Escaner color.
+        <LI>Módem de velocidad 28K o
+        superior.
+        </OL>
+        </MENU>
+  <!--TABLAS-->
+  <table border="5">
+   <!--El titulo puede colocarce bajo la tabla con el comando bottom-->
+  <caption align="top"><font size="+4"><u><b>Alumnos</b></u></font></caption>
+
+  <tr>
+      <th>&nbspRecopilacion de datos&nbsp</th>
+  </tr>
+  <tr>
+     <th><font size="+3" color="#1133ff"><span style='font-family:"Elephant"'>&nbsp Apellido Paterno &nbsp</span></font></th>
+     <th ><font size="+3"color="#1133ff"><span style='font-family:"Elephant"'>&nbsp Apellido Materno &nbsp</span></font></th>
+     <th nowrap><font size="+3" color="#1133ff"><span style='font-family:"Elephant"'>&nbsp Nombrezotes &nbsp</span></font></th>
+  </tr>
+  <tr>
+            <td> De La Rosa &nbsp; </td><td> Muñoz &nbsp; </td><td> Cristhian Erick &nbsp;</td>
+  </tr>
+  <tr>
+            <td><br></td><td><br></td><td><br></td>
+  </tr>
+  <tr>
+            <td><br></td><td><br></td><td><br></td>
+  </tr>
+  </table>
+  <br>
+  <!--******De antemano tenemos que las celdas estan centradas verticalmente, en el caso de th tambien horizontalmente y las td se alinean a la izquierda*******-->
+  <!--******Para poder cambiar esto se usan los atributos align (left,right,center) y valign(top,bottom,middle) usandolos por celda o por renglon de torre****-->
+
+  <table border="5" width="50%" cellspacing="5">
+  <caption align="bottom"><font size="-2">Fin de la tabla 2</font></caption>
+  <tr>
+    <th width="100" height="30" align="center" valign="middle">PERSONAJES</th>
+    <td width="50"  height="30">Semut&nbsp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td width="50"  height="30">Kipa&nbsp;</td>
+  </tr>
+  </table>
+
+  <hr>
+  <table border="0" cellpadding="0" align="right">
+           <caption><font="+3"><b>Tabla de imagenes</b></font></caption>
+           <tr>
+               <td><a href="basico_000.html"><img src="img/erza.png" alt="Erza" border="0"></a></td>
+               <td><a href="basico_001.html"><img src="img/levy.png" alt="Levy"  border="0"></a></td>
+           </tr>
+           <tr>
+               <td><a href="basico_002.html"><img src="img/gray.png"   alt="gray"  border="0"></a></td>
+               <td><a href="basico_list.html"><img src="img/gallel.png" alt="gallel" border="0"></a></td>
+           </tr>
+  </table>
+
+  ******Colocare este texto que envolvera la tabla de imagenes alineada a la derecha
+  de la pantalla y también envolvera la tabla anidada de abajo, <br>
+  al tiempo que esta envuelve a la tabla alineada a la derecha que esta un poco más
+  arriva de la tabla anidada<br>
+  Probando si realmente se envuelve la tabla alineada a la derecha pues es dificil
+  probar la tabla centrada ya que esta un renglon más abajo <br>
+  Observamos que el texto envolvente debe estar bajo la declaracion de la tabla
+  para poder envlverla adecuadamente. De igual manera se puede <br>
+  trasportar al final de la tabla con la instruccion br clear indicando la
+  alineacion de choque que desea evitar. <br clear="all">
+  Con esto nos debemos trasportar bajo la tabla de imagenes.
+  <br>&nbsp;<br>
+  <table border="4" align="center">
+  <caption><b>Una tabla superior</b></caption>
+  <tr> <td>
+           <table border="0" cellpadding="0"align="left">
+           <caption><font="+3"><b>Tabla de imagenes izquierda</b></font></caption>
+           <tr>
+               <td><a href="basico_000.html"><img src="img/erza.png" alt="Erza" border="0"></a></td>
+               <td><a href="basico_001.html"><img src="img/levy.png" alt="Levy"  border="0"></a></td>
+           </tr>
+           <tr>
+               <td><a href="basico_002.html"><img src="img/gray.png"   alt="gray"  border="0"></a></td>
+               <td><a href="basico_list.html"><img src="img/gallel.png" alt="gallel" border="0"></a></td>
+           </tr>
+           </table>
+      </td>
+       <td>
+           <table border="0" cellpadding="0"align="right">
+           <caption><font="+3"><b>Tabla de imagenes derecha</b></font></caption>
+           <tr>
+               <td><a href="basico_000.html"><img src="img/erza.png" alt="Erza" border="0"></a></td>
+               <td><a href="basico_001.html"><img src="img/levy.png" alt="Levy"  border="0"></a></td>
+           </tr>
+           <tr>
+               <td><a href="basico_002.html"><img src="img/gray.png"   alt="gray"  border="0"></a></td>
+               <td><a href="basico_list.html"><img src="img/gallel.png" alt="gallel" border="0"></a></td>
+           </tr>
+           </table>
+       </td>
+  </tr>
+  </table>
+  <hr>
+  <h2>Por ultimo veremos como integrar las celdas de forma horizontal colspan y de forma vertical rowspan</h2>
+    <TABLE BORDER="1">
+    <TR>
+        <TH COLSPAN="2">Celda de dos columnas</TH>
+    </TR>
+    <TR>
+        <TD ROWSPAN="2">Celda de dos filas</TD>
+        <TD>Fila2,Columna2</TD>
+    </TR>
+    <TR>
+        <TD>Fila3,Columna2</TD>
+    </TR>
+  </TABLE>
+  <!--FORMULARIOS-->
+  <hr size="20" width="80%" align="center" noshade>
+  <CENTER><h1>Formularios</h1></center>
+  <ul>
+    <li>Etiqueta "form" con atributos 'enctype=text/plain/multipart/form-data/','method=post/get','action=url/correo/'</li>
+    <li>Es importante colocar los atributos identificadores 'name=""' o 'id=""'</li>
+    <li>Etiquetas "input" con atributos <br>
+      'type="submit/text/password/radio/checkbox/reset/button/image/hidden/file/email/search/number/range/date/time/datetime-local/color"',<br>
+      'value="valor"','size=""','maxlength=""','title="mensaje"','placeholder="texto"','autofocus','disabled','checked',<br>
+      'onclick="function"','autocomplete="off/on"','required','multiple'</li>
+    <li>Etiquetas "button" con atributos 'type=reset/'</li>
+    <li>Las etiquetas "button" pueden incluir etiquetas "img" dentro</li>
+    <li>Etiqueta "textarea" con atributos 'rows','cols',wrap="soft/off/hard"La etiqueta list</li>
+    <li>Etiqueta "select" con atributos 'size=""','multiple' con Etiquetas dentro "option" con atributos 'value=""'</li>
+    <li>La etiqueta "datalist" con etiquetas dentro "option" con atributos 'value=""' y 'label="mensaje"' son llamadas por la etiqueta "input" por el atributo 'list='</li>
+    <li>En los "input" tipo=number/range podemos poner los atributos 'min="0" max="10" step="1"'</li>
+    <li>Una etiqueta "input" puede mandarse a un formulario X haciendo referencia con el atributo 'form=""'</li>
+    <li>Uso de la etiqueta "output" para indicar el rango</li>
+  </ul>
+  <hr size="20" width="80%" align="center" noshade>
+  <!--Comandos Obsoletos-->
+  <kbd></kbd>
+  <keygen></keygen>
+  <!--Comienzo de formularios-->
+  <form enctype="text/plain" method="post" action="theraijuu@gmail.com" >
+  <p>Introdusca su nombre: <input type="text" name="primero" title="introduce tu nombre" >&nbsp;
+  <input type="submit" name="primero" value="Enviame"></p></form>
+
+  <form>
+    <p><input type="text" size="20" maxlength="20" name="segundo" value="NOMBRE:"    align="bottom" ><input type="submit" value="Enviame" name="segundo"></p>
+    <p><input type="text" size="20" maxlength="5"  name="tercero" value="APELLIDO:"  align="bottom" disabled><input type="submit" value="Enviame" name="tercero"></p>
+    <p><input type="text" size="40" maxlength="40" name="cuarto"  value="DIRECCION:" align="bottom" ><input type="submit" value="Enviame" name="cuarto"></p>
+    <p><input type="password" size="20" maxlengt="20"  name="clave"                             align="left"><input type="submit" value="ENVIAR"  name="clave"></p>
+
+  <h2>Selecciona el tipo de Personalidad al que perteneces</h2>
+  <p>INTP    <input type=radio name="mbti" value="intp"></p>
+  <p>INTJ    <input type=radio name="mbti" value="intj" checked></p>
+  <p>ENTP    <input type=radio name="mbti" value="entp"></p>
+  <p>ENTJ    <input type=radio name="mbti" value="entj"></p>
+  <h2>Selecciona tu Genro Musical favorito</h2>
+    <p>
+  Metal   <input type="radio" name="musica" value="metal">
+  Gotico  <input type="radio" name="musica" value="gotico">
+  Salsa   <input type="radio" name="musica" value="salsa">
+  Rock    <input type="radio" name="musica" value="rock">
+    </p><br>&nbsp;
+  </form>
+  <form>
+  <h2>Cheaquea màs de una opciòn caja</h2>
+  <p><input type="checkbox" name="medicina"   value="si" > Medicina
+  <p><input type="checkbox" name="fisica"     value="si" checked> Fisica
+  <p><input type="checkbox" name="filosofia"  value="si" checked> Filosofia
+  <p><input type="checkbox" name="literatura" value="si" checked> Literatura</p>
+  <center>
+  <h2>Un submit, reset y button (con y sin imagen)</h2>
+  <input type="submit" name="box" value="Submit(envia)">
+  <input type="reset" value="Reset">
+  <input type="button" value="Button(cerrar ventana)" onclick="window.close();"><br>
+  <button type="reset" name="boton"><img src="img/erza.png"></button>
+  </center></form>
+           <form><p><center>
+           <h2>Input type 'image'</h2>
+           <input type="image" src="img/perro.jpg" name="envia"></center>
+           </p></form>
+  <form>
+  <INPUT TYPE="hidden"
+  NAME="nombre de la funcion"
+  VALUE="dato que envia">
+  </form>
+  <!--el atributo wrap tiene los valores soft,off,hard-->
+  <br clean="left">
+  <form><p>
+  <h2>Caja text-tarea</h2>
+  <textarea name="textarea" rows="10" cols="50" align="center" wrap="soft">Caja de textarea
+  </textarea>
+  </p></form>
+
+  <h2>Etiqueta "section" con "option" dentro </h2>
+  <h3>Elige un color</h3>
+  <form><p>
+  <select name="color" size="3" multiple >
+  <option value="verde">verde
+  <option value="rojo">rojo
+  <option value="cafe">cafe
+  <option value="azul">azul
+  <option value="blanco">blanco
+  <option value="gris">gris
+  </select><input type="submit" value="ENVIAR">
+  </p></form>
+  <br>&nbsp;<br>&nbsp;
+  <h2>Input type 'file'</h2>
+  <form enctype="multipart/form-data" action="">
+  Enviar fichero<input type="file" name="fichero"><input type="submit" value="ENVIAR">
+  </form>
+  <!--Fin de los primeros Formularios-->
+  <br>&nbsp;<br>&nbsp;
+  <form name="miformulario" id="miformulario" method="get">
+  Input tipo texto YES <input type="text" name="nombre" id="nombre" autocomplete="off"><br>&nbsp;<br>
+  Input tipo email NOT <input type="email" name="miemail" id="miemail" required multiple><br>&nbsp;<br>   <!-- formnovalidate-->
+  Input tipo search NOT <input type="search" name="busqueda" id="busqueda" placeholder="escriba su bùsqueda" autofocus><br>&nbsp;<br>
+  Input tipo url NOT <input type="url" name="miurl" id="miurl"><br>&nbsp;<br>
+  Input tipo tel NOT <input type="tel" name="telefono" id="telefono"><br>&nbsp;<br>
+  Input tipo number YES <input type="number" name="numero" id="numero" min="0" max="10" step="2"><br>&nbsp;<br>
+  Input tipo range YES <input type="range" name="numero" id="numero" min="0" max="10" step="1"><br>&nbsp;<br>
+  Input tipo date YES <input type="date" name="fecha" id="fecha" required><br>&nbsp;<br>
+  Input tipo week NOT<input type="week" name="semana" id="semana"><br>&nbsp;<br>
+  Input tipo month NOT<input type="month" name="mes" id="mes"><br>&nbsp;<br>
+  Input tipo time YES <input type="time" name="hora" id="hora"><br>&nbsp;<br>
+  Input tipo datetime NOT <input type="datetime" name="fechahora" id="fechahora"><br>&nbsp;<br>
+  Input tipo datetime-local YES <input type="datetime-local" name="tiempolocal" id="tiempolocal"><br>&nbsp;<br>
+  Input tipo color YES <input type="color" name="micolor" id="micolor"><br>&nbsp;<br>
+  Input tipo <input pattern="[0-9]{5}" name="codigopostal" id="codigopostal" title="inserte los 5 nùmeros de su còdigo postal"><br>&nbsp;<br>
+
+  Input tipo submit <input type="submit" value="Enviar">
+  </form>
+  <br>&nbsp<br>
+  <h3>Fuera del formulario se puede colocar una entrada de un dato que sera mandada junto con la informacion de la id del formulario especificado</h3>
+  Dato Enviado con el formulario  <input type="search" name="busqueda" id="busqueda" form="miformulario"><br>&nbsp<br>
+  <datalist id="informacion">
+  <option value="123123123" label="Telèfono-1">
+  <option value="456456456" label="Telèfono-2">
+  </datalist>
+  Input con data list <input type="tel" name="telefono" id="telefono" list="informacion">
+  <!--Fin de los Segundos Formularios-->
+  <br>&nbsp;<br>&nbsp;
+  <h2>Uso de JS local en formularios</h2>
+  <form name="registro" method="get">
+  Nombre:
+  <input type="text" name="nombre" id="nombre">
+  Apellido:
+  <input type="text" name="apellido" id="apellido">
+  <input type="submit" id="send" value="ingresar">
+  </form>
+  <br>&nbsp<b>
+  <!--Fin del primer formulario con JS-->
+
+    <h2>Tercer Formulario con JS local</h2>
+    <form name="informacion" method="get">
+    Usuario:
+    <input pattern="[A-Za-z]{3,}" name="usuario" id="usuario"
+    maxlength="10" required>
+    Email:
+    <input type="email" name="miemail" id="miemail" required>
+    Rango de Edad:
+    <input type="range" name="miedad" id="miedad" min="0"
+    max="80" step="20" value="20">
+    <output id="rango">0 a 20</output>
+    <input type="button" id="enviar" value="ingresar1">
+    </form>
+  <!--Video-->
+  <video playsinline autoplay muted loop poster="latino.png">
+    <source src="img/pex.mp4" type="video/mp4">
+    Tu navegador no soporta la liga de video.
+  </video>
+  <!--Embed-->
+  <embed src="Curso-PHP.pdf#toolbar=0" width="700" height="700"><br>
+  <!--Iframe-->
+  <iframe src="http://docs.google.com/gview?url=http://example.com/mypdf.pdf&embedded=true" style="width:400px; height:400px;" frameborder="4"> </iframe>
+  <!--Framset y Target y Base-->
+  <p>
+    Veremos los links a paginas nuevas con la etiqueta target y base<br>
+    <a href="pagina.html">Pagina base</a><br>
+    <a href="lista.html" target="prueba"> Pgina  prueba</a><br>
+    <a href="tab.html"   target="prueba"> pagina prueba </a><br>
+    </p>
+    <iframe name="ven" src="copia.html" width="400" height="400" scrolling="value"   align="center" marginwidth="0" marginheight="0">
+    Tu navegador no soporta frames flotantes, para ver
+    el contenido ve a <A HREF="doc.html">copia.html</A>
+    </iframe>
+    <!--<video width="300" height="300" controls>-->
+    <!--<source src="media/Gepe - Fruta y Te video oficial.mp4" type="video/mp4">-->
+    <!--</video>-->
+    <audio controls>
+    <source src="media/Frozen Plasma - Murderous Trap.mp3" type="audio/mp3">
+    </audio>
+    <font size="+3">
+    <face="arial">
+    <!--****behavior(scroll,slide,alternate),-->
+    <marquee bgcolor=#ee00aa behavior="slide" direction="right" loop="2" scrollamount="5" acolldelay="50" >
+    Marquesina
+    </marquee>
+    </face>
+    </font>
+  <!---->
+  <html>
+  <head>
+  <title>Ventanas 2</title>
+  </head>
+<frameset rows="20%,*" >
+<!--*********LOS ATIBUTOS DE FRAME SON NAME, SRC, SCROLLING(AUTO,NO,YES),NORESIZE, ,marginwidth,marginheight-->
+<frame name="encabezado" src="copia.html"  scrolling="auto" noresize marginwidth="10" marginheight="10">
+<frameset cols="20% ,*" border="20">
+<frame name="columna"    src="lista.html"  scrolling="no" noresize bordecolor="#ff0000" frameborder="1">
+<frame name="principal"  src="pagina.html" scrolling="no" bordercolor="#ff0000"         frameborder="1"> 
+</frameset>
+<noframe>
+<body>
+<p>Te recomendamos visitar una de nuestras paginas sin frames</p
+</body>
+</noframe>
+</frameset>
+</html>
+  <!---->
+    </div>
+    </div>
+</body>
+</html>

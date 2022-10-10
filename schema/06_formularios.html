@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <script>
+        function iniciar(){
+          nombre1=document.getElementById("nombre");
+          nombre2=document.getElementById("apellido");
+          nombre1.addEventListener("input", validacion, false);
+          nombre2.addEventListener("input", validacion, false);
+          validacion();
+        edad=document.getElementById("miedad");
+        edad.addEventListener("change", cambiarrango, false);
+        document.informacion.addEventListener("invalid",validacion1, true);
+        document.getElementById("enviar").addEventListener("click",enviar, false);
+        document.informacion.addEventListener("input", controlar,false);
+        }
+      
+        function validacion(){
+      
+        if(nombre1.value=='' && nombre2.value==''){
+        nombre1.setCustomValidity('inserte al menos un nombre');
+        nombre1.style.background='#FFDDDD';
+        }else{
+        nombre1.setCustomValidity('');
+        nombre1.style.background='#AFEEEE';
+        }
+        }
+      
+        function cambiarrango(){
+        var salida=document.getElementById("rango");
+        var calc=edad.value-20;
+        if(calc<20){calc=0;
+        edad.value=20;
+        }
+        salida.innerHTML=calc+' a '+edad.value;
+        }
+        function validacion1(e){
+        var elemento=e.target;
+        elemento.style.background='#FFDDDD';
+        }
+        function enviar(){
+        var valido=document.informacion.checkValidity();
+        if(valido){
+        document.informacion.submit();
+        }
+        }
+        function controlar(e){
+        var elemento=e.target;
+        if(elemento.validity.valid){
+        elemento.style.background='#AFEEEE';
+        }else{
+        elemento.style.background='#FFDDDD';
+        }
+        }
+        window.addEventListener("load", iniciar, false);
+        </script>
+</head>
+<body>
+<div id="shell">
+    <hr size="20" width="80%" align="center" noshade>
+  <CENTER><h1>Formularios</h1></center>
+  <ul>
+    <li>Etiqueta "form" con atributos 'enctype=text/plain/multipart/form-data/','method=post/get','action=url/correo/'</li>
+    <li>Es importante colocar los atributos identificadores 'name=""' o 'id=""'</li>
+    <li>Etiquetas "input" con atributos <br>
+      'type="submit/text/password/radio/checkbox/reset/button/image/hidden/file/email/search/number/range/date/time/datetime-local/color"',<br>
+      'value="valor"','size=""','maxlength=""','title="mensaje"','placeholder="texto"','autofocus','disabled','checked',<br>
+      'onclick="function"','autocomplete="off/on"','required','multiple'</li>
+    <li>Etiquetas "button" con atributos 'type=reset/'</li>
+    <li>Las etiquetas "button" pueden incluir etiquetas "img" dentro</li>
+    <li>Etiqueta "textarea" con atributos 'rows','cols',wrap="soft/off/hard"La etiqueta list</li>
+    <li>Etiqueta "select" con atributos 'size=""','multiple' con Etiquetas dentro "option" con atributos 'value=""'</li>
+    <li>La etiqueta "datalist" con etiquetas dentro "option" con atributos 'value=""' y 'label="mensaje"' son llamadas por la etiqueta "input" por el atributo 'list='</li>
+    <li>En los "input" tipo=number/range podemos poner los atributos 'min="0" max="10" step="1"'</li>
+    <li>Una etiqueta "input" puede mandarse a un formulario X haciendo referencia con el atributo 'form=""'</li>
+    <li>Uso de la etiqueta "output" para indicar el rango</li>
+  </ul>
+  <hr size="20" width="80%" align="center" noshade>
+  <!--Comandos Obsoletos-->
+  <kbd></kbd>
+  <keygen></keygen>
+  <!--Comienzo de formularios-->
+  <form enctype="text/plain" method="post" action="theraijuu@gmail.com" >
+  <p>Introdusca su nombre: <input type="text" name="primero" title="introduce tu nombre" >&nbsp;
+  <input type="submit" name="primero" value="Enviame"></p></form>
+
+  <form>
+    <p><input type="text" size="20" maxlength="20" name="segundo" value="NOMBRE:"    align="bottom" ><input type="submit" value="Enviame" name="segundo"></p>
+    <p><input type="text" size="20" maxlength="5"  name="tercero" value="APELLIDO:"  align="bottom" disabled><input type="submit" value="Enviame" name="tercero"></p>
+    <p><input type="text" size="40" maxlength="40" name="cuarto"  value="DIRECCION:" align="bottom" ><input type="submit" value="Enviame" name="cuarto"></p>
+    <p><input type="password" size="20" maxlengt="20"  name="clave"                             align="left"><input type="submit" value="ENVIAR"  name="clave"></p>
+
+  <h2>Selecciona el tipo de Personalidad al que perteneces</h2>
+  <p>INTP    <input type=radio name="mbti" value="intp"></p>
+  <p>INTJ    <input type=radio name="mbti" value="intj" checked></p>
+  <p>ENTP    <input type=radio name="mbti" value="entp"></p>
+  <p>ENTJ    <input type=radio name="mbti" value="entj"></p>
+  <h2>Selecciona tu Genro Musical favorito</h2>
+    <p>
+  Metal   <input type="radio" name="musica" value="metal">
+  Gotico  <input type="radio" name="musica" value="gotico">
+  Salsa   <input type="radio" name="musica" value="salsa">
+  Rock    <input type="radio" name="musica" value="rock">
+    </p><br>&nbsp;
+  </form>
+  <form>
+  <h2>Cheaquea màs de una opciòn caja</h2>
+  <p><input type="checkbox" name="medicina"   value="si" > Medicina
+  <p><input type="checkbox" name="fisica"     value="si" checked> Fisica
+  <p><input type="checkbox" name="filosofia"  value="si" checked> Filosofia
+  <p><input type="checkbox" name="literatura" value="si" checked> Literatura</p>
+  <center>
+  <h2>Un submit, reset y button (con y sin imagen)</h2>
+  <input type="submit" name="box" value="Submit(envia)">
+  <input type="reset" value="Reset">
+  <input type="button" value="Button(cerrar ventana)" onclick="window.close();"><br>
+  <button type="reset" name="boton"><img src="img/erza.png"></button>
+  </center></form>
+           <form><p><center>
+           <h2>Input type 'image'</h2>
+           <input type="image" src="img/perro.jpg" name="envia"></center>
+           </p></form>
+  <form>
+  <INPUT TYPE="hidden"
+  NAME="nombre de la funcion"
+  VALUE="dato que envia">
+  </form>
+  <!--el atributo wrap tiene los valores soft,off,hard-->
+  <br clean="left">
+  <form><p>
+  <h2>Caja text-tarea</h2>
+  <textarea name="textarea" rows="10" cols="50" align="center" wrap="soft">Caja de textarea
+  </textarea>
+  </p></form>
+
+  <h2>Etiqueta "section" con "option" dentro </h2>
+  <h3>Elige un color</h3>
+  <form><p>
+  <select name="color" size="3" multiple >
+  <option value="verde">verde
+  <option value="rojo">rojo
+  <option value="cafe">cafe
+  <option value="azul">azul
+  <option value="blanco">blanco
+  <option value="gris">gris
+  </select><input type="submit" value="ENVIAR">
+  </p></form>
+  <br>&nbsp;<br>&nbsp;
+  <h2>Input type 'file'</h2>
+  <form enctype="multipart/form-data" action="">
+  Enviar fichero<input type="file" name="fichero"><input type="submit" value="ENVIAR">
+  </form>
+  <!--Fin de los primeros Formularios-->
+  <br>&nbsp;<br>&nbsp;
+  <form name="miformulario" id="miformulario" method="get">
+  Input tipo texto YES <input type="text" name="nombre" id="nombre" autocomplete="off"><br>&nbsp;<br>
+  Input tipo email NOT <input type="email" name="miemail" id="miemail" required multiple><br>&nbsp;<br>   <!-- formnovalidate-->
+  Input tipo search NOT <input type="search" name="busqueda" id="busqueda" placeholder="escriba su bùsqueda" autofocus><br>&nbsp;<br>
+  Input tipo url NOT <input type="url" name="miurl" id="miurl"><br>&nbsp;<br>
+  Input tipo tel NOT <input type="tel" name="telefono" id="telefono"><br>&nbsp;<br>
+  Input tipo number YES <input type="number" name="numero" id="numero" min="0" max="10" step="2"><br>&nbsp;<br>
+  Input tipo range YES <input type="range" name="numero" id="numero" min="0" max="10" step="1"><br>&nbsp;<br>
+  Input tipo date YES <input type="date" name="fecha" id="fecha" required><br>&nbsp;<br>
+  Input tipo week NOT<input type="week" name="semana" id="semana"><br>&nbsp;<br>
+  Input tipo month NOT<input type="month" name="mes" id="mes"><br>&nbsp;<br>
+  Input tipo time YES <input type="time" name="hora" id="hora"><br>&nbsp;<br>
+  Input tipo datetime NOT <input type="datetime" name="fechahora" id="fechahora"><br>&nbsp;<br>
+  Input tipo datetime-local YES <input type="datetime-local" name="tiempolocal" id="tiempolocal"><br>&nbsp;<br>
+  Input tipo color YES <input type="color" name="micolor" id="micolor"><br>&nbsp;<br>
+  Input tipo <input pattern="[0-9]{5}" name="codigopostal" id="codigopostal" title="inserte los 5 nùmeros de su còdigo postal"><br>&nbsp;<br>
+
+  Input tipo submit <input type="submit" value="Enviar">
+  </form>
+  <br>&nbsp<br>
+  <h3>Fuera del formulario se puede colocar una entrada de un dato que sera mandada junto con la informacion de la id del formulario especificado</h3>
+  Dato Enviado con el formulario  <input type="search" name="busqueda" id="busqueda" form="miformulario"><br>&nbsp<br>
+  <datalist id="informacion">
+  <option value="123123123" label="Telèfono-1">
+  <option value="456456456" label="Telèfono-2">
+  </datalist>
+  Input con data list <input type="tel" name="telefono" id="telefono" list="informacion">
+  <!--Fin de los Segundos Formularios-->
+  <br>&nbsp;<br>&nbsp;
+  <h2>Uso de JS local en formularios</h2>
+  <form name="registro" method="get">
+  Nombre:
+  <input type="text" name="nombre" id="nombre">
+  Apellido:
+  <input type="text" name="apellido" id="apellido">
+  <input type="submit" id="send" value="ingresar">
+  </form>
+  <br>&nbsp<b>
+  <!--Fin del primer formulario con JS-->
+
+    <h2>Tercer Formulario con JS local</h2>
+    <form name="informacion" method="get">
+    Usuario:
+    <input pattern="[A-Za-z]{3,}" name="usuario" id="usuario"
+    maxlength="10" required>
+    Email:
+    <input type="email" name="miemail" id="miemail" required>
+    Rango de Edad:
+    <input type="range" name="miedad" id="miedad" min="0"
+    max="80" step="20" value="20">
+    <output id="rango">0 a 20</output>
+    <input type="button" id="enviar" value="ingresar1">
+    </form>
+</div>
+</body>
+</html>

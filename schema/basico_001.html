@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Basico_01</title>
+</head>
+<body bgcolor="#054420" text="#ffffff" link="#eea0bb" vlink="#ffffff" alink="#ff0000">
+  <hr size="15" width="70%" aling="center" noshade>
+  <h1 align="center">Pagina de LINKS</h1>
+<ul>
+  <li>Fondo de color con atributos de color para los links con etiquetas 'link' 'vlink' y 'alink'</li>
+  <li>Etiqueta 'font' con atributo size</li>
+  <li>Enlaces a un ancla en otras paginas</li>
+  <li>Atributo 'vspace' y 'hspace' para dar margen</li>
+  <li>Salto de linea limpiando 'br e clear=left/right'</li>
+  <li>Enlaces a imagenes locales</li>
+  <li>uso del atributo style='font-family='</li>
+  <li>atributo de imagen usemap="#mapa" y etiqueta map[name=mapa] con etiquetas "area" con atributos shape="circle,square,poly" coords="'''''" href=""</li>
+  <li>Uso de "nohref" como atributo</li>
+</ul>
+  <hr size="15" width="70%" aling="center" noshade>
+  <br>&nbsp;
+  <br>&nbsp;
+
+  <p>
+  <font size="+2">
+  <!--enlace a un _listaancla-->
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="basico_002.html#ultimo_p" name="enlace_hacia_up">Texto Ultimo parrafo</a><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="lista.html#ancla_1"       name="enlace_hacia_lista">listas con Ancla</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="tab.html"                 name="enlace_hacia_tabla">Tablas</a>
+  </font>
+  </p><br>
+  <p>
+  <img src="img/pinguino.jpg" align="left" vspace="5" hspace="30" width="66" height="81" alt="pinguino">
+  el texto ahora rodeara a la imagen <br>
+  incluso si hago saltos de lineas <br clear="left">
+  <!--PODEMOS USAR CLEAN CON RIGHT Y CON ALL||pelicula theorem-->
+  Ahora hacemos un salto bajo la imagen.<br>
+  </p>
+  <!--Un tama�o justo para imagenes inline son de 15 a 20kb-->
+  <p>
+  <a href="img/musica42.jpg">imagen externa</a><br>
+  <a href="img/espacio.png">
+  <img src="img/nave_espacial.jpg" border="0" alt="Viaja al espacio" title="nave espacial" vspace="10" hspace="25" align="left"></a> <br>
+  Esta imagen nos trasportara por el espacio  <br clear="left">
+  <span style='font-family:"Bauhaus 93"'>Cambie el tipo de letra</span>
+  </p>
+  <p>&nbsp;Haremos una imagen mapa dividida en dos sectores mediante cordenadas</p>
+
+  <img src="img/proposito.png" usemap="#mapa0" border="0" alt="Diagrama para encontrar tu proposito" align="left" vspace="10" hspace="40">
+  <!--ahora usamos la etiqueta map que puede encontrarse en alguna otra pagina cuidando que el atributo nombre sea el mismo de la llamada-->
+  <!--Dentro de la etiqueta maps usamos la etiqueta area para designar cada area de la imagen mapa siendo area una etiqueta simple-->
+  <map name="mapa0">
+  <area shape="circle" alt""
+  coords="263,291,12"
+  nohref>
+  <area shape="circle" alt=""
+  coords="260,150,50"
+  href="basico_000.html">
+  <area shape="circle" alt=""
+  coords="410,300,50"
+  href="basico_list.html">
+  <area shape="rect" alt=""
+  coords="85,230,150,360"
+  href="basico_002.html">
+  <area shape="poly" alt=""
+  coords="220,400,261,371,300,400,320,470,200,470"
+  href="basico_tab.html">
+  </map>
+  <br clear="all">
+  <hr size="20" width="80%" align="center" noshade>
+</body>
+</html>

@@ -1,0 +1,125 @@
+
+.header, .footer {
+clear: both;
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+
+.menu {
+   float: left;
+    width: 25%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.content {
+    float: left;
+    width: 75%;
+}
+/*****************************/
+.env{overflow:auto;
+border: 3px solid #73AD21;}
+.img2 {
+    float: right;
+}
+div.first p{display:none;
+           background-color: yellow;
+           padding: 20px;}
+div.first:hover p {display: block;
+}
+
+p.parrafo::first-letter{color: #ff0000;
+    font-size: xx-large;}
+p.parrafo::first-line{color: #0000ff;
+    font-variant: small-caps;}
+p.parrafo::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+
+p.parrafo::selection {
+    color: red;
+    background: yellow;
+}
+/******************************/
+ul.lista1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.lista1 li a{display: block;
+             width: 60px;
+ background-color: #dddddd;}
+
+ul.lista2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+ul.lista2 li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+ul.lista2 li a:hover {
+    background-color: #555;
+    color: white;
+}
+/************/
+div.vent p{display:none;background-color: #f9f9f9;min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); padding: 12px 16px;}
+
+div.vent:hover p{display:block}
+
+div.fifth button{background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;}
+div.sixth{display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
+div.sixth a{color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;}
+div.fifth:hover div.sixth{display:block}
+div.sixth a:hover{background-color: #f1f1f1}
+div.fifth:hover .boton{blackground-color:#005541;}
+
+div.seventh{position:relative;display:inline-block}
+div.seventh:hover div.eighth{display:block}
+div.eighth{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+div.nineth{padding:15px;text-align:center;}
+
+div.tenth{position:relative;display:inline-block;border-bottom:1px dotted black;}
+.eleventh{visibility:hidden;width:120px;background-color:black;color:#fff;text-align:center;border-radius:6px;padding_5px 0;
+            position:absolute;z-index:1;to�:-5px;left:105%;}
+div.tenth:hover .eleventh{visibility:visible;}

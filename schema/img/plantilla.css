@@ -1,0 +1,120 @@
+body{ background-image: url(Anarq.jpg);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+      }
+h1{color:navy; margin-left:100px;}
+/*********Position de imagenes e imagenes**********/
+div.uquiorra img{position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;}
+/*El div second es el div externo*/
+div.rosa {
+    position: relative;
+}
+/*El div center esta contenido en second*/
+div.textc{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+
+div.rosa img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+/*El div third tiene posicion estatica*/
+div.caja{
+background: #eee000;
+width:200px;
+height:60px;
+border:5px dotted blue;
+overflow-x:hidden;
+overflow-y:scroll;}
+
+/*Ordenamiento de lista por css*/
+div.thirtieth {
+    counter-reset: section;
+}
+
+div.thirtieth h1 {
+    counter-reset: subsection;
+}
+
+div.thirtieth h1::before {
+    counter-increment: section;
+    content: "Section " counter(section) ". ";
+}
+
+div.thirtieth h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+/************/
+#seccion1{background-color: lightblue;}
+
+.borde{border-style: dotted;}
+.borde1{border-style: dashed; border-width: 2px 10px 4px 20px;}
+.borde2{border-style: solid;border-width: 5px;border-color: red;}
+.borde3{border-style: double;}
+.borde4{border-style: groove;}
+.borde5{border-style: ridge;}
+.borde6{border-style: inset;}
+.borde7{border-style: outset;}
+.borde8{border-style: none;}
+.borde9{border-style: hidden; border-color: red;}
+.borde10{border-style: dotted dashed solid double;}
+.borde11{border-top-style: dotted;
+         border-right-style: solid;
+         border-bottom-style: dotted;
+         border-left-style: solid;
+          }
+.parte2{color:blue;text-align:justify;text-indent: 50px;
+        word-spacing: 10px;}
+.parte2 #first{text-transform: lowercase;}
+.parte2 #title{text-decoration: overline;
+               text-transform: uppercase;
+               letter-spacing: 10px;}
+.parte2 #second{ text-decoration: underline;
+                text-transform: capitalize;
+                line-height: 1.5;}
+.parte2 #link {text-decoration:line-through;
+               direction: rtl;font-size: 22px}
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover{
+    background-color: red;
+}
+a:active{background:green}
+/*Edicion de texto*/
+.parte3{}
+.parte3 #first{ font-size: 2.5em;font-style: italic;}
+.parte3 #second{font-style: oblique;font-variant: small-caps;}
+/*position*/
+.first{position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;}
+.second{position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;}
+.third{position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;}

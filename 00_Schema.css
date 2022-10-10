@@ -1,0 +1,79 @@
+/*Todo elemento a margin y padding cero*/  
+*{margin:0px; padding:0px;box-sizing:border-box;}
+
+/*UNIDADES REM,EM,VH,VW,VMAX,VMIN*/
+html{font-size: 62.5%;}
+
+/*FORMATEAMOS EL DISPLAY DE LAS SECCIONES PRINCIPALES: BLOCK,INLINE, INLINE-BLOCK, GRID, FLEX, NONE*/
+header, section, footer, aside, nav, article, figure, figcaption,hgroup{display: block;} 
+/*
+box-sizing:border-box;content-box;
+z-index: -1; transform: translateY(-25vh) translateZ(0px) scale(1); opacity: 1.0;
+heigth:*, with:*;
+margin:*; padding:*;
+
+position:( static;relative;absolute;fixed;sticky; ) position: -webkit-sticky; ( Safari ) 
+top:*; buttom:*; right:*; left:*; 
+float:*; clear:*; justify-content: center; align-items:center; object-fit:( cover,fill,contain,none,scale-down ) ;
+
+border: 3px solid #73AD21;border-width:10px 1px 5px 20px;text-align:*;
+
+background-color:lightblue; background-image: url(logo.svg); background-repeat: no-repeat; background-position: left top;
+background:linear-gradient(90deg, rgba(0,83,33,1) 0%, rgba(215,198,1,1) 100%);
+background-size: cover; auto,contain,cover,%,px background-attachment: fixed;
+
+
+text-transform:capitalize,uppercase,lowercase; color:red; font-size:25px; font-weight:bold; font-family: sans-serif;
+text-shadow:1px 1px 8px rgba(0,0,0,0.6); text-decoration:none; font-variant: small-caps;
+word-spacing: 10px; letter-spacing: 10px;
+
+overflow-y: hidden;border-radius: 10px;
+border-style: ( dotted,dashed,solid,double,groove,ridge,inset,outset,none, ) ;
+border-width: 2px 10px 4px 20px; border-bottom-style: dotted
+
+cursor: pointer; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+https://www.youtube.com/watch?v=wqIS-r04r4c 
+*/
+
+/*ID's*/
+#shell {text-align: center; width:100%;}
+#banner {background: #FFFBB9;border: 1px solid #ffffff;padding: 20px;text-align: center;}
+#menu {background: #CCCCCC;padding: 5px 15px;}
+#menu li {display: inline-block;list-style: none;padding: 5px;font: bold 14px verdana, sans-serif;}
+#section {float: left; width: 660px;margin: 20px;}
+#surf {float: right; width: 220px;margin: 20px 0px; padding: 25px; background: #CCCCCC;}
+#under {clear: both;text-align: center;padding: 20px;border-top: 2px solid #999999;}
+
+/*class*/ 
+article.class {background: #FFFBCC;border: 1px solid #999999;padding: 20px;margin-bottom: 15px;}
+article.class footer {text-align: right;}
+article.class time {color: #999999;}
+article.class figcaption {font: italic 14px verdana, sans-serif;}
+article.class h1{font:bold 20px verdana,sans-serif;}
+article.class mark{background:#cccccc}
+.lista {font-size: 15px}
+ol.lista {font-size: 17px}
+.class p:nth-child(1){background:#999900} /*Parientes*/
+.class p:nth-child(odd){background:#005555} /*Inpar*/
+.class p:nth-child(even){background:#007777} /*Par*/
+.class p:first-child{background:#0000ff}    /*primero*/
+div > p.hijo {background:#00ff00; font-size:22px; }  /*hijo*/
+p.primero+p {font-size:22px; color:#ffffff} /*Adyacente*/
+p.hijo ~ p{font-size:22px; color:#ffff00}   /*Concatena todos */
+
+/*Parrafo por name*/
+p[name="ejemplo"]{font-size: 17px}
+p[name^="linea"]{font-size: 23px}      /*first*/
+p[name$="segunda"]{font-size: 28px}   /*last*/
+p[name*="xyz"]{font-size: 15px}        /*any*/
+
+/*Cualquier elemento que no sea un parrafo*/
+:not(p){margin:2px;padding:2px}
+
+/*MAuse*/
+div.vent:hover p{display:block;}
+div.fifth:hover div.sixth{}
+div.fifth:hover .boton{}
+div.tenth:hover .eleventh{visibility:visible;}
+
+p{all: unset;} /*inherit, initial,unset,revert*/

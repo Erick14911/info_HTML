@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+<div id="shell">
+    <hr size="20" width="80%" align="center" noshade>
+  <CENTER><h1>Tablas</h1></CENTER>
+  <ul>
+    <li>Etiqueta "table" con atributos 'border','width','cellspacing','cellpading','align'</li>
+    <li>Etiqueta "caption" con atributos 'align' seguida de una etiqueta regularmente de "font"</li>
+    <li>Etiqueta "tr" (FILAS)</li>
+    <li>Etiqueta "th" para encabezados y "td" para COLUMNAS normales con atributos width="100" height="30" align="center" valign="middle"</li>
+    <li>Integrar en "th" o en "td" RENGLONES 'rowspan=numero' e integrar COLUMNAS 'colspan=numero'</li>
+  </ul>
+  <hr size="20" width="80%" align="center" noshade>
+  <table border="5">
+   <!--El titulo puede colocarce bajo la tabla con el comando bottom-->
+  <caption align="top"><font size="+4"><u><b>Alumnos</b></u></font></caption>
+
+  <tr>
+      <th>&nbspRecopilacion de datos&nbsp</th>
+  </tr>
+  <tr>
+     <th><font size="+3" color="#1133ff"><span style='font-family:"Elephant"'>&nbsp Apellido Paterno &nbsp</span></font></th>
+     <th ><font size="+3"color="#1133ff"><span style='font-family:"Elephant"'>&nbsp Apellido Materno &nbsp</span></font></th>
+     <th nowrap><font size="+3" color="#1133ff"><span style='font-family:"Elephant"'>&nbsp Nombrezotes &nbsp</span></font></th>
+  </tr>
+  <tr>
+            <td> De La Rosa &nbsp; </td><td> Muñoz &nbsp; </td><td> Cristhian Erick &nbsp;</td>
+  </tr>
+  <tr>
+            <td><br></td><td><br></td><td><br></td>
+  </tr>
+  <tr>
+            <td><br></td><td><br></td><td><br></td>
+  </tr>
+  </table>
+  <br>
+  <!--******De antemano tenemos que las celdas estan centradas verticalmente, en el caso de th tambien horizontalmente y las td se alinean a la izquierda*******-->
+  <!--******Para poder cambiar esto se usan los atributos align (left,roght,center) y valign(top,bottom,middle) usandolos por celda o por renglon de torre****-->
+
+  <table border="5" width="50%" cellspacing="5">
+  <caption align="bottom"><font size="-2">Fin de la tabla 2</font></caption>
+  <tr>
+    <th width="100" height="30" align="center" valign="middle">PERSONAJES</th>
+    <td width="50"  height="30">Semut&nbsp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td width="50"  height="30">Kipa&nbsp;</td>
+  </tr>
+  </table>
+
+  <hr>
+  <table border="0" cellpadding="0" align="right">
+           <caption><font="+3"><b>Tabla de imagenes</b></font></caption>
+           <tr>
+               <td><a href="basico_000.html"><img src="img/erza.png" alt="Erza" border="0"></a></td>
+               <td><a href="basico_001.html"><img src="img/levy.png" alt="Levy"  border="0"></a></td>
+           </tr>
+           <tr>
+               <td><a href="basico_002.html"><img src="img/gray.png"   alt="gray"  border="0"></a></td>
+               <td><a href="basico_list.html"><img src="img/gallel.png" alt="gallel" border="0"></a></td>
+           </tr>
+  </table>
+
+  ******Colocare este texto que envolvera la tabla de imagenes alineada a la derecha
+  de la pantalla y también envolvera la tabla anidada de abajo, <br>
+  al tiempo que esta envuelve a la tabla alineada a la derecha que esta un poco más
+  arriva de la tabla anidada<br>
+  Probando si realmente se envuelve la tabla alineada a la derecha pues es dificil
+  probar la tabla centrada ya que esta un renglon más abajo <br>
+  Observamos que el texto envolvente debe estar bajo la declaracion de la tabla
+  para poder envlverla adecuadamente. De igual manera se puede <br>
+  trasportar al final de la tabla con la instruccion br clear indicando la
+  alineacion de choque que desea evitar. <br clear="all">
+  Con esto nos debemos trasportar bajo la tabla de imagenes.
+  <br>&nbsp;<br>
+  <table border="4" align="center">
+  <caption><b>Una tabla superior</b></caption>
+  <tr> <td>
+           <table border="0" cellpadding="0"align="left">
+           <caption><font="+3"><b>Tabla de imagenes izquierda</b></font></caption>
+           <tr>
+               <td><a href="basico_000.html"><img src="img/erza.png" alt="Erza" border="0"></a></td>
+               <td><a href="basico_001.html"><img src="img/levy.png" alt="Levy"  border="0"></a></td>
+           </tr>
+           <tr>
+               <td><a href="basico_002.html"><img src="img/gray.png"   alt="gray"  border="0"></a></td>
+               <td><a href="basico_list.html"><img src="img/gallel.png" alt="gallel" border="0"></a></td>
+           </tr>
+           </table>
+      </td>
+       <td>
+           <table border="0" cellpadding="0"align="right">
+           <caption><font="+3"><b>Tabla de imagenes derecha</b></font></caption>
+           <tr>
+               <td><a href="basico_000.html"><img src="img/erza.png" alt="Erza" border="0"></a></td>
+               <td><a href="basico_001.html"><img src="img/levy.png" alt="Levy"  border="0"></a></td>
+           </tr>
+           <tr>
+               <td><a href="basico_002.html"><img src="img/gray.png"   alt="gray"  border="0"></a></td>
+               <td><a href="basico_list.html"><img src="img/gallel.png" alt="gallel" border="0"></a></td>
+           </tr>
+           </table>
+       </td>
+  </tr>
+  </table>
+  <hr>
+  <h2>Por ultimo veremos como integrar las celdas de forma horizontal colspan y de forma vertical rowspan</h2>
+    <TABLE BORDER="1">
+    <TR>
+        <TH COLSPAN="2">Celda de dos columnas</TH>
+    </TR>
+    <TR>
+        <TD ROWSPAN="2">Celda de dos filas</TD>
+        <TD>Fila2,Columna2</TD>
+    </TR>
+    <TR>
+        <TD>Fila3,Columna2</TD>
+    </TR>
+  </TABLE>
+</div>    
+</body>
+</html>
