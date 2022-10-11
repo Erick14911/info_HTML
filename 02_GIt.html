@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Git</title>
+</head>
+<body>
+    <h1>Comandos Git</h1>
+    
+    <ul align="Center">
+        <li>https://git-scm.com/docs/git#_git_commands</li>  
+        <h2>Puesta en operacion</h2>
+        <li>git init - Inicializa git</li>
+        <li>git config --global --list <br>
+            git config --global user.email ""<br>
+            git config --global user.name ""<br>
+            git config --global --unset-all user.name <br>
+            git config --global --add user.name ""   
+        </li>
+        <li>git status -s - muestra el estado de los archivos</li>
+        <li>git add index.html - Lo lleva al area de ensayo</li>
+        <li>git commit -m "Comienzo" - Lo Guarda al repositorio local</li>
+        <li>[Modifica el archivo y luego ...]</li>
+        <li>git add *.*</li>
+        <li>git commit -m "descripcion" - Hace un nuevo commit</li>
+        <li>git log --oneline - Muestra los commit</li>
+        <li>git reset --hard (codigo) - regresa al commit del cofigo</li>
+        <h2>Subir repositorio a Github </h2>
+        <li>ssh -vT git@github.com</li>
+        <li>ssh -T -p 443 git@ssh.github.com</li>
+        <li>ssh-agent -s</li>
+        <li>git remote add origin [url].git</li>
+        <li>git remote -v</li>
+        <li>git remote set-url origin [new-url]</li>
+        <li>git remote rename origin dev</li>
+        <li>git remote rm origin</li>
+        <li>git push origin master(local a remoto)</li>
+        <h3>Subir desde Visual Studio Code</h3>
+        <li>view - comand palete - Git Clone</li>
+        <li>Introducir la url del repositorio: url.git</li>
+        <li>Crar carpeta de proyecto y area de trabajo</li>
+
+        <h2>Bajar archivo</h2>
+        <li>git clone url.git - Clona o descarga el repositorio desde Github</li>
+        <li>git pull origin master(remoto a local)</li>
+        <li>git fetch - trabaja en las ramas</li>
+        <h2>Etiquetas. Estancia fija</h2>
+        <li>git tag 08-07-22v1 -m "Version 1" - Hace etiqueta en estage</li>
+        <li>git push --tags - La pega en la raíz</li>
+        <h2>Ramas</h2>
+        <li>git branch "name" - Crea la rama</li>
+        <li>git branch - muestra las ramas</li>
+        <li>git checkout name - moverse de rama</li>
+        <li>git branch -d name -borra la rama</li>
+        <h2>Fucionar ramas</h2>
+        <li>git merge namebranch - Desde master fuciona rama</li>
+        <li>Pull request - marge request</li>
+        <h2>Fork Copia un repositorio de otra cuenta Github</h2>
+        <li>Pull request</li>    
+        <li>Configuración - Administrador de credenciales - credenciales de windows</li>
+        <li></li>
+    </ul>
+
+</body>
+</html>

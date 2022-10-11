@@ -1,0 +1,22 @@
+/*General*/ 
+*{margin:0px; padding:0px;box-sizing:border-box;}
+html{font-size: 62.5%;}
+header, section, footer, aside, nav, article, figure, figcaption,hgroup{display: block;} 
+#shell {width:100%;}
+/*Secciones Principales*/
+/**/
+#section {heigth:70vh; with:70vw;
+          margin-top:25vh;
+         }
+h1{text-align:center; font-family: sans-serif;font-size:5em;}
+h2{text-align:center; font-family: sans-serif;font-size:3em;}
+p{text-align:left;margin:1.5em;}
+ul{list-style:none; margin-left:2em;padding:1.5em;}
+ol{margin-left:2em;padding:1.5em;}
+li{font-size:1.8em; margin-top:1.5em;}
+.subli{font-size:0.6em;}
+span[name=azul]{color: rgb(50, 44, 215);}
+span[name=rojo]{color: rgb(223, 37, 37);}
+span[name=verde]{color: rgb(6, 174, 73);}
+
+/**/

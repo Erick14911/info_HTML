@@ -1,0 +1,148 @@
+Editor Vim https://atareao.es/tutorial/vim/
+
+Modo Comando: Esc , :
+Modo insert: i,o,a
+Remplace: ciw, R
+Subrayado: v
+copy-page: y and p
+re-hacer: u
+Delate: x, dw,  d, dd , d$, db
+Move: w, b, $, 0
+
+Sustitude: :rango s/patron/remplazo/[cgil]
+  RANGO='numero'(linea concreta), 'init,final'(rango), '.'(linea actual), '$'(ultima linea), '%'(Todo el archivo)
+  C=confirmar
+  G=todas las ocurrencias
+  I=no distingue mayusculas y minusculas
+  L=si diferencia entre mayusculas y minusculas
+
+    :%s/print\s*.*$/print(\1) le pone paréntesis a todos los print
+    :%s/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$//g elimina colores en hexadecimal
+    :%s/^(?:[0-9a-f]{2}[\-:]?){6}(?<![\-:])$//g elimina las direcciones MAC
+    :%s/<!\[CDATA\[(.*)\]\]>//g eliminar etiquetas CDATA
+
+Search: /word+enter n or N, ?word+enter n or N, *  n or N
+Jump: gg , G , numG
+brackets: shift 5 
+
+ZOOM: ctrl w + | - 
+MoveDefinition: gd
+MoveReverse: ctrl o , ctrl i
+
+NERDTree:: ?help
+gs abre en horizontal
+gi abre en vertical
+(m)MENU
+
+Expresiones Regulares: regex101.com, regexr.com/, RegEx Testing
+Basicos: \ . + *
+Comienza con: ^ 
+Finaliza con: $
+Rango: [a-z] [a,b,c] [^]
+Repeticion de : char{3,5}
+
+\n, \r, \t, \0
+()
+
+ORTOGRAFIA Terminal:
+
+mkdir -p ~/.vim/spell
+cd ~/.vim/spell
+wget --no-check-certificate https://ftp.vim.org/vim/runtime/spell/es.latin1.spl
+wget --no-check-certificate https://ftp.vim.org/vim/runtime/spell/es.latin1.sug
+wget --no-check-certificate https://ftp.vim.org/vim/runtime/spell/es.utf-8.spl
+wget --no-check-certificate https://ftp.vim.org/vim/runtime/spell/es.utf-8.sug
+
+/.vimrc = setlocal spell spelllang=es
+:set spell -> Activar
+:set nospell -> desactivar corrector
+Navegación: ]s, [s
+Corrigiendo: z=  :spellrepall
+
+cd ~
+touch .vimrc
+vim .vimrc
+*******************************************************************
+*set number relativenumber
+*set nu rnu "Hybrid. Relative numbers
+set number "Numera las lineas
+set wildmenu "autocompleta comandos :
+set nohlsearch "limpia el resaltado despues de busqueda
+set splitbelow splitright "abrir ventanas abajo y a la derecha
+set ignorecase "Ignora mayusculas y minusculas en busquedas
+set mouse=a 
+set scrolloff=8 "Margen de scrolling del cursor
+set numberwidth=1
+set clipboard=unnamed
+syntax enable
+set showcmd
+set ttyfast
+set ruler
+set encoding=utf-8 "unicode
+set showmatch "brackets
+set laststatus=2 
+set noshowmode
+set nocompatible
+set rtp+=~/.vim/bundle/Vundle.vim
+set autoindent "Auto identado 
+set expandtab  "Tabulador
+set shiftwidth=2 "Numero de identacion
+set softtabstop=2 "Regreso de identacion
+autocmd BufRead,BufNewFile *.py setlocal shiftwidth=4 softtabstop=4
+set backspace=indent,eol,start "Uso de backspace 
+set bg=light
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scriooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'morhetz/gruvbox'
+Plugin 'chriskempson/base16-vim'
+Plugin 'christoomey/vim-tmux-navigator'
+call vundle#end()
+
+let mapleader=" "
+nmap <Leader>w :w<CR>  
+nmap <Leader>q :q<CR>
+nmap <Leader>nt :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen=1
+*let g:NERDTreeHighlightCursorline=1
+*let g:NERDTreeShowHidden=1
+*let g:NERDTreeAutoDelateBuffer=1
+*let g:NERDTreeQuitOnOpen=0
+nmap <Leader>c oconsole.log({});<Esc>0t{la
+
+nnoremap <silent> <C-q> :lclose<bar>b#<bar>bd #<CR>
+nnoremap <silent> <Leader>h+ :exe "resize " . (winheight(0) * 5/4)<CR>
+nnoremap <silent> <Leader>h- :exe "resize " . (winheight(0) * 4/5)<CR>
+nnoremap <silent> <Leader>g+ :exe "vertical resize " . (winheight(0) * 5/4)<CR>
+nnoremap <silent> <Leader>g- :exe "vertical resize " . (winheight(0) * 4/5)<CR>
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap * *zzzv
+noremap <silent> <Up> gk
+noremap <silent> <Down> gj
+
+inoremap <Left> <c-g>U<Left>
+inoremap <Right> <c-g>U<Right>
+
+map <C-d> :bnext<CR>
+map <C-a> :bprev<CR>
+
+imap <C-D> <Esc>:bnext<CR>a
+imap <C-A> <Esc>:bprev<CR>a
+imap <C-c> <Esc>
+ 
+
+let g:tmux_navigator_mo_mappings=1
+
+let &t_ut='' " To render properly backgound of the color scheme
+let g:gruvbox_contrast_light="hard"
+colorscheme gruvbox
+
+filetype plugin indent on
+filetype plugin on
+
+**PluginInstall
+*******************************************************************
