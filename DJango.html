@@ -27,12 +27,16 @@
         <ol>
             <li>Tener python en el path (mi equipo-propiedades-confi.avanzada-)</li>
             <li>Pagina de DJango</li>
+            <li>Entorno virtual: python -m venv entorno</li>
+            <li>Ejecutar en cd entorno\Scripts 'activate'</li>
             <li>pip install Django==version</li>
             <li>python //Entra en el powershell python</li>
             <li>import django</li>
             <li>django.VERSION</li>
             <li><a href="https://docs.djangoproject.com/en/4.0/ref/">Hoja de referencias DJango</a></li>
-            <li>clases con los que trabaja: Request(peticiones)-HttpResponse(respuesta)</li>
+            <li>Podemos crear un documento .py con la siguiente clase:</li>
+            <li>from django.http import HttpResponse</li>
+            <li>Registarandola en Urls</li>
         </ol>
        
        <h2>Crar Documento</h2>
@@ -44,6 +48,7 @@
             <li>manage.py: Linea de comandos para interactuar</li>
             <li>__init__.py: Modulos de manage</li>
             <li>settings.py: Configuraciones</li>
+            <li>Dividir settings.py en una carpeta settings:_init_.py, base.py, local.py, prod.py</li>
             <li>urls.py:     Almacen de urls</li>
             <li>wsgi.py:     Servidor web</li>
         </ol>
@@ -86,12 +91,25 @@
     
         <ol>
             <li>python manage.py runserver</li>
+            <li>python manage.py runserver --settings=proyecto.settings.local</li>
             <li>starting development server at http//127.0.0.1:800/</li>
             <li>navegador:http//127.0.0.1:800/</li>
             <li>Salir del serviodor con ctrl+supr</li>
         </ol>
-       
-       <h2>Crear el modulo "views.py" y "urls.py"</h2>
+        <h2>CREAR UNA APP</h2>
+     
+        <ol>
+            <li>python manage.py startapp gestionPedidos</li>
+            <li>django-admin startapp name</li>
+            <li>Registrarlo en setings.py: <br>
+                INSTALLED_APPS = [''] </li>
+            <li>python manage.py check nombreapp</li>
+            <li>Despues de hacer los models</li>
+            <li>python manage.py makemigrations </li>
+            <li>python manage.py sqlmigrate nombreapp No.de.migracion</li>
+            <li>python manage.py migrate</li>
+        </ol>
+        <h2>Crear el modulo "views.py" y "urls.py"</h2>
        
         <ol>
             <li><p><span name="verde">from django.http import HttpResponse</span><br>
