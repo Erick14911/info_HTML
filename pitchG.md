@@ -10,11 +10,8 @@ El problema se extiende al uso de la tierra, alrededor del 30% de la superficie 
 
 Los alimentos sostenibles no utilizan pesticidas, fertilizantes o semillas geneticamente modificadas. Al usar metodos naturales, se protege la biodiversidad y el futuro de nuestro ecosistema. Un producto sostenible, en general necesita menos recursos para su producción y siendo un producto local evitamos las emisiones CO2 derivadas del transporte así como permitir que los productos maduren de forma natural. Esto no solo implica que podemos consumir productos más frescos y de temporada, sino con mayor valor nutritivo. 
 
-La aplicación busca contribuir al crecimiento de economias locales, enseñando metodos de autocultivo y conectando a las personas.
-
-*Competencia
-*Diferenciador
-*Cierre 
+Conocemos las multiples aplicaciónes y campañas en pro de la vida saludable y la buena alimentación, estas a menudo solamente enfocadas en dietas fitness y en la promoción de alimentos alternativos.
+Nuestra aplicación busca contribuir al crecimiento de economias locales, enseñando metodos de autocultivo y conectando a las personas impulsando la produccion de alimentos sostenibles y consumo responsable con el medio ambiente. 
 ~~~
 
 ~~~
