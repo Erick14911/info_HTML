@@ -2,7 +2,7 @@
 
 Desarrollamos una aplicación movil para asistir a los consumidores y los productores de alimentos sostenibles. 
 
-Se prevé que la población mundial alcanzará los 8.000 millones el 15 de noviembre de este mismo año, la producción de alimentos para cubrir la demanda es una de las grandes devastaciones del planeta. La gandería contribuye a la degradación de la tierra y el agua, la pérdida de la biodiversidad, y la lluvia ácida. la degeneración de arrecifes de coral y la deforestación. La ganadería contribuyye al 18% de las emisiones de gases de efecto invernadero producidos por el ser humano en el mundo, cifra que se dispara sobre el 51% si sumamos las emisiones de industrias rellacionadas y el efecto multiplicador que tienen gases como el metano. Esto es más que todas las emisiones de barcos, aviones, camiones, automóviles y todos los demás transportes juntos. 
+Se prevé que la población mundial alcanzará los 8.000 millones el 15 de noviembre de este mismo año, la producción de alimentos para cubrir la demanda es una de las grandes devastaciones del planeta. La gandería contribuye a la degradación de la tierra y el agua, la pérdida de la biodiversidad, la lluvia ácida, la destrucción de arrecifes de coral y la deforestación. La ganadería contribuyye al 18% de las emisiones de gases de efecto invernadero producidos por el ser humano en el mundo, cifra que se dispara sobre el 51% si sumamos las emisiones de industrias rellacionadas y el efecto multiplicador que tienen gases como el metano. Esto es más que todas las emisiones de barcos, aviones, camiones, automóviles y todos los demás transportes juntos. 
 
 Para producir un kilogramo de carne se necesitan 25 kilogramos de grano - para alimentar al animal - y aproximadamente 15000 litros de agua. Alimentar con grano al ganado aumenta la demanda mundial y sube los precios, produciendo pobresa y hambre.
 
@@ -12,6 +12,15 @@ Los alimentos sostenibles no utilizan pesticidas, fertilizantes o semillas genet
 
 Conocemos las multiples aplicaciónes y campañas en pro de la vida saludable y la buena alimentación, estas a menudo solamente enfocadas en dietas fitness y en la promoción de alimentos alternativos.
 Nuestra aplicación busca contribuir al crecimiento de economias locales, enseñando metodos de autocultivo y conectando a las personas impulsando la produccion de alimentos sostenibles y consumo responsable con el medio ambiente. 
+
 ~~~
+
+Mi nombre es [nombre], estoy aquí por una razón, y una sola razón: el mercado de [nombre del mercado] ha crecido más del [número] por ciento en los últimos [número] años. 
+
+Desde [incidente], [número] de personas han [tomado medidas], lo que significa que nunca ha habido un mejor momento para una innovación bien recibida en el sector de [mercado], nunca. 
+
+Por eso estoy aquí representando a [nombre de la empresa], una nueva herramienta diseñada específicamente para aprovechar la demanda de [tema]. Gracias a nuestra tecnología patentada [tipo de tecnología], hemos creado una solución única para [problema] mediante [explique cómo funciona la solución]. 
+
+Este es el hecho: [nueva tendencia] está aquí para quedarse, y no podemos ignorar el impacto que tendrá en nuestras vidas. Por [cantidad], nos ayudarás a cerrar nuestra ronda de financiación inicial y a recibir [oferta] en el proceso. Juntos, podemos convertir a [empresa] en el líder del mercado en lo que respecta a [tema]. 
 
 ~~~
