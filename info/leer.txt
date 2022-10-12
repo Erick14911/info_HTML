@@ -1,1 +1,17 @@
 https://www.atlassian.com/git/tutorials/syncing/git-fetch
+https://lenguajes.com.mx/aplicacion-web-python-python/
+
+Cursos:
+https://skillshop.withgoogle.com/
+
+Servidores:
+https://www.pythonanywhere.com/
+https://www.digitalocean.com/?refcode=d464e42336a5&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=CopyPaste
+
+https://www.hostinger.es/tutoriales/hosting-compartido-o-vps#%C2%BFQue_es_el_hosting_compartido
+https://rockcontent.com/es/blog/vps-hosting/
+https://latam.kaspersky.com/resource-center/definitions/what-is-a-vpn
+
+
+
+https://neunapp.com/contenido/tipos-de-campos-de-un-modelo-en-django-fields-in-models-18329
