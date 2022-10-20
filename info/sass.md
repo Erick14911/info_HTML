@@ -62,4 +62,19 @@ footer{
     .nameClass{
         @include cuadrado(#333)
     }
- 
+
+**quiebres**
+
+    @media(mn-width:640px){
+    }
+    @media(mn-width:768px){
+    }
+    @media(mn-width:1024px){}
+    @media(mn-width:1280px){}
+
+**Bootstrap**
+
+source files=dist-scss-index.html
+ctr-f:
+
+**tailwind css = link CDM usa clases**
