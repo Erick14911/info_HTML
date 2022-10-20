@@ -1,20 +1,30 @@
-https://www.youtube.com/watch?v=uqEyWw9kTvc
-install NodeJS
->>>node -v
->>>npm -v
+<!--@author:Erick14911-->
+# TypeScript
 
-Instalaciones: npm install -g typescript --save-dev
+## 1. Instalacion de Node.js
 
-npx tsc
+## 2. Comprueba Node y npm
 
-Visual code
->>>tsc -init
-*tsconfig.json{
-"targe":"ES5",
-"strict":false}
+    >>>node -v
+    >>>npm -v
 
-*main.ts
- 
+## 3. Abre terminal en Visual Studio Code
+
+    >>>tsc -init 
+
+## 4. Cambiar configuración del archivo **typescript**
+
+    tsconfig.json{
+    "targe":"ES5",
+    "strict":false
+    }
+
+## 5. Crear archivo con extención `.ts` **main.ts**
+
+## 6. Editarlo
+
+~~~
+
   let mi_variable:string="Hola mundo";
   let numero:number=12;
   let verdadero:boolean=true;
@@ -40,10 +50,12 @@ Visual code
  }).join("")
  +"</ul>";
 
->>>tsc main.ts -w
+~~~
 
-*index.html
-<script src="main.js" defer></script>
-<body>
-  
-</body>
+## 7. Compilar **main.ts**
+
+    >>>tsc main.ts -w
+
+## 8. Etiqueta `<script>` en Index.html
+    
+    <script src="main.js" defer></script>
