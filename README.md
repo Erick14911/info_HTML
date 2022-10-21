@@ -4,18 +4,18 @@
 
 ## Estructuras **Basicas** de codigo HTML y CSS
 
-+ [Esquema HTML](00_HTML_Schema.html)
-+ [Esquema CSS](00_Schema.css)
++ [Esquema HTML](00_basico/00_HTML_Schema.html)
++ [Esquema CSS](00_basico/00_Schema.css)
 
 ## Partes **Basicas** de codigo HTML
 
-+ [Indice de HTML](01_Index_schemaone.html)
++ [Indice de HTML](01_basico/01_Index_schemaone.html)
 
 
 ## Partes **Basicas** de CSS
 
-1. [Ejemplo css](schema/basico_3css.html)
-2. [Ejemplo css](schema/basico_4css.html)
+1. [Ejemplo css](01_basico/schema/basico_3css.html)
+2. [Ejemplo css](01_basico/schema/basico_4css.html)
 
 ## Partes **Intermedias** de codigo HTML
 
